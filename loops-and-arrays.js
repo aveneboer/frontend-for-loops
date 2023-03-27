@@ -5,6 +5,14 @@
 // ==========================================
 
 const names = ["Henk", "Piet", "Fred", "Joop"];
+console.log(names);
+
+const koosnaampjes = names.map(naam => naam + "je");
+
+// Vervang de originele array met de nieuwe array met koosnaampjes
+names.splice(0, names.length, ...koosnaampjes);
+
+console.log(names); // ["Henkje", "Pietje", "Fredje", "Joopje"]
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
@@ -21,8 +29,18 @@ const names = ["Henk", "Piet", "Fred", "Joop"];
 // Schrijf een script dat ieder EVEN getal in onderstaande array met 2 vermenigvuldigd, en ieder ONEVEN getal met 3
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
 // ==========================================
-
 const numbers = [2, 4, 5, 29, 38];
+console.log(numbers);
+for (let i = 0; i < numbers.length; i++) {
+    if ( numbers[i] % 2 === 0) {
+        numbers[i] *= 2;
+    } else {
+        numbers[i] *= 3;
+    }
+}
+    console.log(numbers);
+
+
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
@@ -43,6 +61,14 @@ const numbers = [2, 4, 5, 29, 38];
 // ==========================================
 
 const squares = [30, 2, 8, 24, 11];
+console.log(squares);
+for (let i = 0; i < squares.length; i++) {
+    const square = squares[i];
+    const volume = square * square * square;
+    squares[i] = `Het volume van ${square} is ${volume}`;
+}
+console.log(squares);
+
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
